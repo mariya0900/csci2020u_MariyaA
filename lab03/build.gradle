@@ -1,3 +1,11 @@
+buildscript{
+	repositories{
+		flatDir dirs: 'C:/Eclipse IDE/CSCI2020-Software Systems/csci2020u/proguard6.2.2/lib'
+	}
+	dependencies{
+		classpath ':proguard'
+	}
+}
 apply plugin: 'java'
 apply plugin: 'application'
 
@@ -18,4 +26,9 @@ jar{
 		'Implementation-Title': 'Lab 03 Example',
 		'Implementation-Version': version		
 	}
+}
+task (minify, dependsOn: 'jar', type: proguard.gradle.ProGuardTask){
+		configuration 'proguard.cfg'
+		injars 'build/libs/lab03-1.0.jar'
+		outjars 'build/libs/Lab03-1.0.min.jar'
 }
