@@ -1,13 +1,16 @@
 buildscript{
 	repositories{
 		flatDir dirs: 'C:/Eclipse IDE/CSCI2020-Software Systems/csci2020u/proguard6.2.2/lib'
+		jcenter()
 	}
 	dependencies{
 		classpath ':proguard'
+		classpath "com.netflix.nebula:gradle-lint-plugin:16.17.0"
 	}
 }
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: "nebula.lint"
 
 repositories {
 	mavenCentral()
