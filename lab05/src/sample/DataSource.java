@@ -4,8 +4,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class DataSource {
+    public static ObservableList<StudentRecord> marks;
+
     public static ObservableList<StudentRecord> getAllMarks() {
-        ObservableList<StudentRecord> marks = FXCollections.observableArrayList();
+        marks = FXCollections.observableArrayList();
         // Student ID, Assignments, Midterm, Final exam
         marks.add(new StudentRecord("100100100", 75.0f, 68.0f,
                 54.25f)); marks.add(new StudentRecord("100100101", 70.0f,
@@ -23,4 +25,5 @@ public class DataSource {
                 74.25f));
         return marks;
     }
+
 }

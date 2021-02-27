@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
 <GridPane fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
     <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0">
@@ -18,4 +19,10 @@
         </columns>
 
     </TableView>
+    <TextField fx:id="addStudentID" text="Add student ID" onMouseClicked="#clearStudentID" GridPane.rowIndex="5" GridPane.columnIndex="0" > </TextField>
+    <TextField fx:id="addAssignments" text="Add assignments" onMouseClicked="#clearAssignments" GridPane.rowIndex="6" GridPane.columnIndex="0"></TextField>
+    <TextField fx:id="addMidterm" text="Add midterm" onMouseClicked="#clearMidterm"  GridPane.rowIndex="5" GridPane.columnIndex="1"></TextField>
+    <TextField fx:id="addFinalExam" text="Add Final Exam" onMouseClicked="#clearFinalExam" GridPane.rowIndex="6" GridPane.columnIndex="1"></TextField>
+    <Button id="btnAdd" fx:id="btnAdd" text="Add" onAction="#btnPress" GridPane.columnIndex="0"
+            GridPane.rowIndex="7"/>
 </GridPane>
