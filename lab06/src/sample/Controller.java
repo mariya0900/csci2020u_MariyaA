@@ -79,7 +79,7 @@ public class Controller {
         gc.setFill(color2);
         x=xInc/2;
         for (double val:data2){
-            double height=((val-minValue)/(maxValue-minValue))*h;
+            double height=(val/maxValue)*h;
 
             gc.fillRect(x, h-height, xInc/2, height);
             x+=xInc;
@@ -96,7 +96,7 @@ public class Controller {
         int sum = 0;
         for (int i : data)
             sum += i;
-        
+
         int colorIndex=0;
 
         for (double val:data){
