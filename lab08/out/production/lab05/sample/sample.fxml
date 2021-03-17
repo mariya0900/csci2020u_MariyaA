@@ -1,0 +1,41 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <MenuBar id="menuBar" fx:id="menuBar" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <Menu text="File">
+            <MenuItem text="New" fx:id="new" onAction="#clear"></MenuItem>
+            <MenuItem text="Open" fx:id="open" onAction="#open"></MenuItem>
+            <MenuItem text="Save" fx:id="save" onAction="#save"></MenuItem>
+            <MenuItem text="Save As" fx:id="saveAs" onAction="#saveAs"></MenuItem>
+            <MenuItem text="Exit" fx:id="exit" onAction="#exit"></MenuItem>
+
+        </Menu>
+    </MenuBar>
+    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <columns>
+            <TableColumn fx:id="studentIDCol" text="Student ID"></TableColumn>
+            <TableColumn fx:id="assignmentsCol" text="Assignments"></TableColumn>
+            <TableColumn fx:id="midtermCol" text="Midterm"></TableColumn>
+            <TableColumn fx:id="finalExamCol" text="Final Exam"></TableColumn>
+            <TableColumn fx:id="finalMarkCol" text="Final Mark"></TableColumn>
+            <TableColumn fx:id="letterGradeCol" text="Letter Grade"></TableColumn>
+        </columns>
+
+    </TableView>
+    <TextField fx:id="addStudentID" text="Add student ID" onMouseClicked="#clearStudentID" GridPane.rowIndex="5" GridPane.columnIndex="0" > </TextField>
+    <TextField fx:id="addAssignments" text="Add assignments" onMouseClicked="#clearAssignments" GridPane.rowIndex="6" GridPane.columnIndex="0"></TextField>
+    <TextField fx:id="addMidterm" text="Add midterm" onMouseClicked="#clearMidterm"  GridPane.rowIndex="5" GridPane.columnIndex="1"></TextField>
+    <TextField fx:id="addFinalExam" text="Add Final Exam" onMouseClicked="#clearFinalExam" GridPane.rowIndex="6" GridPane.columnIndex="1"></TextField>
+    <Button id="btnAdd" fx:id="btnAdd" text="Add" onAction="#btnPress" GridPane.columnIndex="0"
+            GridPane.rowIndex="7"/>
+</GridPane>
